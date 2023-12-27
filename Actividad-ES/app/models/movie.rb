@@ -1,6 +1,6 @@
 class Movie < ActiveRecord::Base
   
-  # attr_accessor :title, :rating, :description, :director, :release_date
+  # validates :director, allow_nil: be_true
 
   #### Part 1 ####
   # implement this method. Remeber to exclude [self]
