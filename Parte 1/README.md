@@ -121,14 +121,15 @@ Dado lo implementado previamente, respecto a director, se espera que los pasos r
 Estos escenarios son aprobados porque ya se encuentra implementado director en nuestra base de datos, y dichos escenarios muestran que si me dirijo a movies, voy a ser capaz de encontrar a los directores correspondientes.
 
 
-Vemos que los pasas background ahora pasan, pero el primer paso de cada escenario falla porque no hemos proporcionado the edit page.
+
+Ahora veremos que los pasos background ahora pasan, pero el primer paso de cada escenario falla porque no hemos proporcionado las páginas para los *when I visit the edit page* o similares. Por ejemplo, para *the edit page for "Aliens"*.
 
 ![Alt text](image-27.png)
 
 
-Dado la prueba de cucumber, vemos que tenemos que dirigirnos a features/support/paths.rb, que es de donde se está generando el error. Agregaremos los siguientes mapeos de edit y details que son dados por las pruebas de cucumber:
+Dado la prueba de cucumber, vemos que tenemos que dirigirnos a `features/support/paths.rb`, que es de donde se está generando el error. Agregaremos los siguientes mapeos de `edit` y `details` que son dados por las pruebas de cucumber:
 
-![Alt text](image-28.png)
+![Alt text](image-48.png)
 ![Alt text](image-29.png)
 
 
