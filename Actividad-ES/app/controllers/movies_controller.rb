@@ -38,6 +38,12 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def show_by_director
+    @movie = Movie.find params[:id]
+    @movies = Movie.others_by_same_director(@movie.director, @movie.id)
+  end
+
+
   private
 
   # Note - for Part 1, you may need to modify this method.

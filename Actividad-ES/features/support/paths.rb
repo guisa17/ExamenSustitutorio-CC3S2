@@ -30,6 +30,9 @@ module NavigationHelpers
         movie_path(Movie.find_by_title($2))
     end
 
+    when /^the Similar Movies page for "(.*)"$/i
+      movie = Movie.find_by_title($1)
+      show_by_director_movie_path(movie.id) if movie.present?
 
     else
       begin
