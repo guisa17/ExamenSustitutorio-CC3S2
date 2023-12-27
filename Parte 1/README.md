@@ -10,28 +10,44 @@ Cambiamos al directorio de rottenpotatoes que se ha entregado para esta activida
 ![Alt text](image.png)
 ![Alt text](image-2.png)
 
-Seguidamente, crearemos el esquema de base de datos inicial:
+Como se puede apreciar, no ha habido algún inconveniente respecto a versiones de Ruby o similares, por lo que se puede continuar con el trabajo sin problema alguno.
+
+
+Seguidamente, crearemos el esquema de base de datos inicial. Dado nuestro proyecto, este será implementado en `db/migrate/20111119180638_create_movies.rb`, y tendrá la siguiente estructura:
+
 ![Alt text](image-3.png)
 
-Luego, agregaremos algunos datos adicionales a nuestro archivo db/seeds.rb:
+Luego, aunque de manera opcional, agregaremos algunos datos adicionales a nuestro archivo `db/seeds.rb`. Para nuestro caso, he agregado la película `tmpMovie`.
+
 ![Alt text](image-4.png)
 
-Seguidamente, realizaremos la migración y la llenaremos con los datos proporcionados en seeds.rb.
+
+A continuación, realizaremos la migración y la llenaremos con los datos proporcionados en seeds.rb.
+
 ![Alt text](image-5.png)
 ![Alt text](image-6.png)
 
-Tendremos los siguientes archivos creados:
+
+Inmediatamente, tendremos los siguientes archivos creados:
+
 ![Alt text](image-7.png)
 
-Verficamos el funcionamiento de rspec:
+
+Verficamos el funcionamiento de RSpec ejecutando `rspec`:
+
 ![Alt text](image-8.png)
 
-Verificamos la configuración de cucumber:
+
+Y verificamos la configuración de cucumber ejecutando `cucumber`:
+
 ![Alt text](image-10.png)
 ![Alt text](image-11.png)
 
-Asimismo se muestra el caso de error mencionado:
+
+Asimismo se muestra el caso de error mencionado.
+
 ![Alt text](image-12.png)
+
 
 
 ## Agregar un campo Director a Movies
