@@ -1,37 +1,113 @@
-<!doctype html>
-<html>
-    <head>
-    <title>Curso CC-3S2</title>
-        <style>
-            .hide {
-            display: none;
-            }
-            .error {
-            color: red;
-            font-size: 0.8em;
-            font-family: sans-serif;
-            font-style: italic;
-            }
-            input {
-            border-color: #ddd;
-            width: 400px;
-            display: block;
-            font-size: 1.5em;
-            }
-        </style>
-    </head>
-    <body>
-        <form name="myform"> Email :
-        <input type="text" name="email"> <span class="error hide"></
-        span>
-        <br> Password :<input type="password" name="password"> <span class="error
-        hide"></span>
-        <br> User Nombre :
-        <input type="text" name="userName"> <span class="error hide"></
-        span>
-        <br>
-        <input type="submit" value="Sign Up"> </form>
-        <script>
-        </script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso CC-3S2</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    
+    .hide {
+      display: none;
+    }
+    
+    .error {
+      color: red;
+      font-size: 0.8em;
+      font-style: italic;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input {
+      border: 1px solid #ddd;
+      width: 400px;
+      display: block;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form name="myform">
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email">
+    <span class="error hide" id="emailError"></span>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
+    <span class="error hide" id="passwordError"></span>
+    <br>
+
+    <label for="userName">User Nombre:</label>  
+    <input type="text" name="userName" id="userName">
+    <span class="error hide" id="userNameError"></span>
+    <br>
+
+    <input type="submit" value="Sign Up">
+  </form>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Paso 1
+      const form = document.getElementById('myform');
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+      const userNameInput = document.getElementById('userName');
+
+      const emailError = document.getElementById('emailError');
+      const passwordError = document.getElementById('passwordError');
+      const userNameError = document.getElementById('userNameError');
+
+      // Paso 2
+      form.addEventListener('submit', function (event) {
+        // Paso 3
+        const errorElements = document.querySelectorAll('.error');
+        errorElements.forEach(function (errorElement) {
+          errorElement.classList.add('hide');
+        });
+
+        // Paso 4
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+          handleError(emailError, "Correo electrónico no válido");
+          event.preventDefault();
+        }
+
+        // Paso 7
+        const passwordRegex = /^[a-zA-Z0-9]{3,8}$/;
+        if (!passwordRegex.test(passwordInput.value)) {
+          handleError(passwordError, "Contraseña no válida (debe tener entre 3 y 8 caracteres alfanuméricos)");
+          event.preventDefault();
+        }
+
+        // Paso 8
+        const formData = {};
+        const formInputs = form.querySelectorAll('input');
+        formInputs.forEach(function (input) {
+          formData[input.name] = input.value;
+        });
+
+        // Paso 9
+        if (!emailError.classList.contains('hide') || !passwordError.classList.contains('hide')) {
+          event.preventDefault();
+        } else {
+          console.log("Enviar datos:", formData);
+        }
+      });
+
+      // Paso 5
+      function handleError(errorElement, errorMessage) {
+        errorElement.textContent = errorMessage;
+        errorElement.classList.remove('hide');
+      }
+    });
+  </script>
+</body>
 </html>
