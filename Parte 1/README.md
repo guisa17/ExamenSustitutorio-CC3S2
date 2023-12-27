@@ -31,3 +31,31 @@ Asimismo se muestra el caso de error mencionado:
 
 ## Agregar un campo Director a Movies
 
+Agregaremos la columna Director a nuestra migración por medio de add_column de ActiveRecord::Migration. Primero, generaremos la migración:
+![Alt text](image-16.png)
+![Alt text](image-17.png)
+
+Realizamos la migración respectiva:
+![Alt text](image-18.png)
+
+Luego, preparamos para cargar el nuevo esquema posterior a la migración:
+![Alt text](image-19.png)
+
+Vemos que al ejecutar nuestra app, esta ser verá de la siguiente manera:
+![Alt text](image-20.png)
+
+Sin embargo, necesitamos modificar nuestras vistas y nuestro modelo para que se pueda apreciar el campo para los directores.
+
+Modificando nuestra vista tendremos el nuevo campo para director:
+![Alt text](image-23.png)
+![Alt text](image-21.png)
+
+Luego, nuestro modelo agregaremos la siguiente línea:
+![Alt text](image-22.png)
+
+Ejecutando ahora cucumber, vemos como algunos escenarios pasan:
+![Alt text](image-26.png)
+![Alt text](image-25.png)
+
+Estos escenarios son aprobados porque ya se encuentra implementado director en nuestra base de datos, y dichos escenarios muestran que si me dirijo a movies, voy a ser capaz de encontrar a los directores correspondientes.
+

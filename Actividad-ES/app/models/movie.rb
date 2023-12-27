@@ -1,4 +1,6 @@
 class Movie < ActiveRecord::Base
+  
+  validates :director, presence: true
 
   #### Part 1 ####
   # implement this method. Remeber to exclude [self]
