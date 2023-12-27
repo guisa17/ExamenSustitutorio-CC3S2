@@ -105,9 +105,15 @@ Respecto a nuestro modelo, para lograr que este nuevo campo "se note", haremos u
 ![Alt text](image-45.png)
 
 
+Continuando, ahora ejecutaremos `cucumber` para poder visualizar los pasos fallidos de los escenarios. Dichas definiciones podremos encontrarlas en `features/movies_by_director.feature`.
 
-Ejecutando ahora cucumber, vemos como algunos escenarios pasan:
+![Alt text](image-46.png)
 
+
+Dado lo implementado previamente, respecto a director, se espera que los pasos respecto a la creación de la tabla con la columna director puedan ser creadas. Esto debido a que ya hemos implementado nuestra base de datos con la nueva columna director.
+
+
+![Alt text](image-47.png)
 ![Alt text](image-26.png)
 ![Alt text](image-25.png)
 
