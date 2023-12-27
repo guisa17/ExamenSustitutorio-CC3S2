@@ -22,9 +22,11 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
     
     when /^the (.*) page for "(.*)"$/
-      if $1 == 'edit'
-        edit_movie_path(Movie.find_by_title($2)[:id])
-      else $1 == 'details'
+      case $1
+      when 'edit'
+        movie = Movie.find_by_title($2)
+        edit_movie_path(movie.id) if movie.present?
+      when 'details'
         movie_path(Movie.find_by_title($2))
     end
 

@@ -74,3 +74,27 @@ De no realizar este cambio, las acciones de create y update no funcinarían corr
 
 ## Utiliza pruebas de aceptación para aprobar nuevos escenarios
 
+Para el primer escenario tenemos:
+![Alt text](image-31.png)
+
+Realizamos la siguiente moficación:
+![Alt text](image-32.png)
+
+Ahora tendremos:
+![Alt text](image-33.png)
+
+Para solucionar los siguiente errores, nos dirigiremos a nuestra vista edit, en donde tendremos que agregar los campos de director:
+![Alt text](image-34.png)
+
+
+
+## Cobertura de código
+
+Para este apartado de utilzará SimpleCov para la medición de cobertura de pruebas, para nuestro caso, volveremos a ejecutar las pruebas de cucumnber, y SimpleCov nos dará un informe en coverage/.
+![Alt text](image-35.png)
+![Alt text](image-36.png)
+
+Cuyo informe obtenido será:
+![Alt text](image-37.png)
+
+Podemos notar que aún será necesario realizar pruebas específicamente en el archivo movies_controller.rb.
