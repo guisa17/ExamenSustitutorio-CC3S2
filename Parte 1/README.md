@@ -1,6 +1,11 @@
-# Parte 1
+# Parte 1: El ciclo de prueba de aceptación-prueba unitaria
 
-Cambiamos al directorio de rottenpotatoes que se ha entregado para esta actividad. E inmediatamente ejecutaremos bundle install --without production para asegurar que las gemas y dependencias necesarias estén instaladas.
+Empezaremos nuestra tarea con escenario Cucumber que fallan, y, paso a paso, escribiremos el código para que dichos pasos puedan pasar las pruebas. De manera general, agregaremos la característica "buscar películas con el mismo director" a rottenpotatoes. 
+
+
+## Corre y prepara rottenpotatoes
+
+Cambiamos al directorio de rottenpotatoes que se ha entregado para esta actividad. E inmediatamente ejecutaremos `bundle install --without production` para asegurar que las gemas y dependencias necesarias estén instaladas.
 
 ![Alt text](image.png)
 ![Alt text](image-2.png)
