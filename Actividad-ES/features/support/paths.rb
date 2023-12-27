@@ -20,6 +20,14 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+    
+    when /^the (.*) page for "(.*)"$/
+      if $1 == 'edit'
+        edit_movie_path(Movie.find_by_title($2)[:id])
+      else $1 == 'details'
+        movie_path(Movie.find_by_title($2))
+    end
+
 
     else
       begin
@@ -35,3 +43,4 @@ module NavigationHelpers
 end
 
 World(NavigationHelpers)
+  
