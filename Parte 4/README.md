@@ -21,3 +21,6 @@ Ejecutaremos por medio de `rspec tests.rb`:
 Implementaremos la siguiente clase.
 
 ![Alt text](image-5.png)
+
+Este código de la clase TennisScorer simplifica y organiza la lógica del marcador de tenis. En la inicialización, se establece el puntaje inicial para ambos jugadores. El método público calculate_score determina el estado actual del juego, considerando casos como "DEUCE" cuando ambos jugadores tienen un puntaje de 3, y traduce el puntaje a su representación en el tenis convencional. Además, gestiona las condiciones de victoria ("W-L" o "L-W") cuando un jugador alcanza una ventaja de dos puntos sobre el otro. Se emplean funciones privadas para dividir la lógica en partes más pequeñas y comprensibles, facilitando la lectura y mantenimiento del código. Este diseño mejora la legibilidad y claridad del código al tiempo que mantiene la funcionalidad esencial del sistema de puntuación del juego de tenis.
+
