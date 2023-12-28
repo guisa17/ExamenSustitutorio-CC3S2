@@ -18,3 +18,6 @@ Ejecutaremos por medio de `rspec tests.rb`:
 
 ![Alt text](image-4.png)
 
+Implementaremos la siguiente clase.
+
+![Alt text](image-5.png)
